@@ -8,6 +8,8 @@ namespace PaymentContractExcercise
     {
         static void Main()
         {
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+
             Console.WriteLine("Enter contract data: ");
 
             Console.Write("Number: ");
@@ -22,7 +24,9 @@ namespace PaymentContractExcercise
             Console.Write("Enter number of installments: ");
             int installments = int.Parse(Console.ReadLine());
 
-            Contract contract = new(contractNumber, contractDate, contractValue);
+            Contract contract = new(contractNumber, contractDate, contractValue, installments);
+
+            Console.WriteLine(contract);
 
         }
     }
