@@ -12,7 +12,7 @@ namespace PaymentContractExcercise
 
             Console.WriteLine("Enter contract data: ");
 
-            Console.Write("Number: ");
+            Console.Write("Contract Number: ");
             int contractNumber = int.Parse(Console.ReadLine());
 
             Console.Write("Date (dd/MM/yyyy): ");
@@ -24,9 +24,22 @@ namespace PaymentContractExcercise
             Console.Write("Enter number of installments: ");
             int installments = int.Parse(Console.ReadLine());
 
-            Contract contract = new(contractNumber, contractDate, contractValue, installments);
+            Contract contract = new(contractNumber, contractDate, contractValue);
+
+            for (int i = 1; i <= installments; i++)
+            {
+                DateTime dueDate = contract.ContractDate.AddDays(30 * i);
+                double amount = contractValue / installments;
+
+                contract.Installments.Add(new Installment(dueDate, amount));
+            }
 
             Console.WriteLine(contract);
+
+            foreach(var installment in contract.Installments)
+            {
+                Console.WriteLine(installment);
+            }
 
         }
     }
