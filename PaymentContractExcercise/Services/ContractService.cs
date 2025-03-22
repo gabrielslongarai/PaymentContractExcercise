@@ -1,6 +1,7 @@
 ﻿namespace PaymentContractExcercise.Services
 {
-    class ProcessContractService
+    class ContractService
     {
+
     }
 }
