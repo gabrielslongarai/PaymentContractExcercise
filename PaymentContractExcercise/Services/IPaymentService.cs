@@ -7,6 +7,6 @@ namespace PaymentContractExcercise.Services
     {
         public double MonthlyInterest(double amount, int months);
 
-        public double PaymentFee(double amount, int months);
+        public double PaymentFee(double amount);
     }
 }

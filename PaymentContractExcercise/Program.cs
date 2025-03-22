@@ -29,7 +29,7 @@ namespace PaymentContractExcercise
             for (int i = 1; i <= installments; i++)
             {
                 DateTime dueDate = contract.ContractDate.AddDays(30 * i);
-                double amount = contractValue / installments;
+                double amount = contract.ContractValue / installments;
 
                 contract.Installments.Add(new Installment(dueDate, amount));
             }
@@ -40,6 +40,7 @@ namespace PaymentContractExcercise
             {
                 Console.WriteLine(installment);
             }
+
 
         }
     }

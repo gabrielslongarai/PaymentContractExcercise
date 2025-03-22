@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return $"{DueDate.ToString("dd/MM/yyyy")} - {Amount:F2}";
+            return $"\n{DueDate.ToString("dd/MM/yyyy")} - {Amount:F2}";
         }
     }
 }

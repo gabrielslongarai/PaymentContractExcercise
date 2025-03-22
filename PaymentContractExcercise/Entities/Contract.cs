@@ -12,14 +12,15 @@
             ContractNumber = contractNumber;
             ContractDate = contractDate;
             ContractValue = contractValue;
+
         }
 
         public override string ToString()
         {
             return $"\nContract Number {ContractNumber}" +
                    $"\nContract Date: {ContractDate.ToString("dd/MM/yyyy")}" +
-                   $"\nContract Value {ContractValue:F2}" +
-                   $"\nInstallments Quantity {Installments.Count}";
+                   $"\nContract Value: {ContractValue:F2}" +
+                   $"\nInstallments Quantity: {Installments.Count}";
         }
     }
 }
